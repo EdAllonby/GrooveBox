@@ -31,6 +31,8 @@ namespace GrooveBox
         /// </summary>
         public int BarPosition { get; private set; }
 
+        public bool ContainsGroove { get; private set; }
+
         public void HoldNewGroove(Groove groove)
         {
             var name = string.Concat(groove.Genre, " > ", groove.Name);
@@ -47,7 +49,5 @@ namespace GrooveBox
 
             ContainsGroove = true;
         }
-
-        public bool ContainsGroove { get; private set; }
     }
 }

@@ -4,7 +4,6 @@ namespace GrooveBox
 {
     public static class SaveFileHelper
     {
-
         public static string SaveFile(string filter, string extension)
         {
             SaveFileDialog saveFileDialog = new SaveFileDialog

@@ -4,12 +4,21 @@ using System.Windows.Interactivity;
 
 namespace GrooveBox
 {
-    public class RightColumnWidthReseterBehaviour : Behavior<Expander>
+    /// <summary>
+    /// A new <see cref="Expander"/> behaviour for when it collapses and its width has changed.
+    /// </summary>
+    public sealed class RightColumnWidthReseterBehaviour : Behavior<Expander>
     {
         private Grid parentGrid;
 
+        /// <summary>
+        /// The left grid row.
+        /// </summary>
         public int TargetGridRowIndex { get; set; }
 
+        /// <summary>
+        /// Called when the behaviour is successfully attached to an <see cref="Expander"/>.
+        /// </summary>
         protected override void OnAttached()
         {
             AssociatedObject.Expanded += (s, e) => ResetColumnDefinitions();
@@ -20,6 +29,7 @@ namespace GrooveBox
         private void FindParentGrid()
         {
             DependencyObject parent = LogicalTreeHelper.GetParent(AssociatedObject);
+
             while (parent != null)
             {
                 if (parent is Grid)

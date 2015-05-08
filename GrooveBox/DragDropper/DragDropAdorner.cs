@@ -9,11 +9,6 @@ namespace GrooveBox.DragDropper
     /// </summary>
     public abstract class DragDropAdorner : UserControl
     {
-        // Using a DependencyProperty as the backing store for DropState.  This enables animation, styling, binding, etc...
-        public static readonly DependencyProperty AdornerDropStateProperty =
-            DependencyProperty.Register("AdornerDropState", typeof (DropState), typeof (DragDropAdorner),
-                new UIPropertyMetadata(DropStateChanged));
-
         protected DragDropAdorner()
         {
             ScaleTransform scale = new ScaleTransform(1f, 1f);
@@ -42,5 +37,9 @@ namespace GrooveBox.DragDropper
         }
 
         protected abstract void StateChangedHandler(DependencyObject d, DependencyPropertyChangedEventArgs e);
+        // Using a DependencyProperty as the backing store for DropState.  This enables animation, styling, binding, etc...
+        public static readonly DependencyProperty AdornerDropStateProperty =
+            DependencyProperty.Register("AdornerDropState", typeof (DropState), typeof (DragDropAdorner),
+                new UIPropertyMetadata(DropStateChanged));
     }
 }

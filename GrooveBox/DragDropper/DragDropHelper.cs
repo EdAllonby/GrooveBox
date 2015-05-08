@@ -12,36 +12,6 @@ namespace GrooveBox.DragDropper
     {
         private const string CanDropResourceName = "CanDrop";
         private const string CannotDropResourceName = "CannotDrop";
-        private static DragDropHelper instance;
-
-        /// <summary>
-        /// Flag the element as a drag source.
-        /// </summary>
-        public static readonly DependencyProperty IsDragSourceProperty =
-            DependencyProperty.RegisterAttached("IsDragSource", typeof (bool), typeof (DragDropHelper),
-                new UIPropertyMetadata(false, IsDragSourceChanged));
-
-        /// <summary>
-        /// Flag the element as a drag drop control.
-        /// </summary>
-        public static readonly DependencyProperty DragDropControlProperty =
-            DependencyProperty.RegisterAttached("DragDropControl", typeof (UIElement), typeof (DragDropHelper),
-                new UIPropertyMetadata(null));
-
-        /// <summary>
-        /// Flag the adorner.
-        /// </summary>
-        public static readonly DependencyProperty AdornerLayerProperty =
-            DependencyProperty.RegisterAttached("AdornerLayer", typeof (string), typeof (DragDropHelper),
-                new UIPropertyMetadata(null));
-
-        /// <summary>
-        /// Flag the drop targets. Delimit these with a comma character (',')
-        /// </summary>
-        public static readonly DependencyProperty DropTargetsProperty =
-            DependencyProperty.RegisterAttached("DropTargets", typeof (string), typeof (DragDropHelper),
-                new UIPropertyMetadata(string.Empty));
-
         private readonly List<UIElement> dropTargets = new List<UIElement>();
         private DragDropAdorner adorner;
         private Canvas adornerLayer;
@@ -337,5 +307,35 @@ namespace GrooveBox.DragDropper
                 adorner.ReleaseMouseCapture();
             }
         }
+
+        private static DragDropHelper instance;
+
+        /// <summary>
+        /// Flag the element as a drag source.
+        /// </summary>
+        public static readonly DependencyProperty IsDragSourceProperty =
+            DependencyProperty.RegisterAttached("IsDragSource", typeof (bool), typeof (DragDropHelper),
+                new UIPropertyMetadata(false, IsDragSourceChanged));
+
+        /// <summary>
+        /// Flag the element as a drag drop control.
+        /// </summary>
+        public static readonly DependencyProperty DragDropControlProperty =
+            DependencyProperty.RegisterAttached("DragDropControl", typeof (UIElement), typeof (DragDropHelper),
+                new UIPropertyMetadata(null));
+
+        /// <summary>
+        /// Flag the adorner.
+        /// </summary>
+        public static readonly DependencyProperty AdornerLayerProperty =
+            DependencyProperty.RegisterAttached("AdornerLayer", typeof (string), typeof (DragDropHelper),
+                new UIPropertyMetadata(null));
+
+        /// <summary>
+        /// Flag the drop targets. Delimit these with a comma character (',')
+        /// </summary>
+        public static readonly DependencyProperty DropTargetsProperty =
+            DependencyProperty.RegisterAttached("DropTargets", typeof (string), typeof (DragDropHelper),
+                new UIPropertyMetadata(string.Empty));
     }
 }

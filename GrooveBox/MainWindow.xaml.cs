@@ -107,7 +107,7 @@ namespace GrooveBox
 
         private void OnFillRemainingClicked(object sender, RoutedEventArgs e)
         {
-            foreach (GrooveContainer grooveContainer in sampleGrid.GrooveContainers.Where(grooveContainer=>!grooveContainer.ContainsGroove))
+            foreach (GrooveContainer grooveContainer in sampleGrid.GrooveContainers.Where(grooveContainer => !grooveContainer.ContainsGroove))
             {
                 SetRandomGroove(new List<string>(), grooveContainer);
             }

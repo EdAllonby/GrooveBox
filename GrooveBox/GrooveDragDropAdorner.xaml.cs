@@ -20,7 +20,7 @@ namespace GrooveBox
 
         protected override void StateChangedHandler(DependencyObject d, DependencyPropertyChangedEventArgs e)
         {
-            GrooveDragDropAdorner myclass = (GrooveDragDropAdorner)d;
+            GrooveDragDropAdorner myclass = (GrooveDragDropAdorner) d;
 
             switch ((DropState) e.NewValue)
             {

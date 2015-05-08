@@ -8,7 +8,13 @@
     xmlns:global="clr-namespace:GrooveBox"
     mc:Ignorable="d" x:Class="GrooveBox.MainWindow"
     Title="GrooveBox" Height="800" Width="1200" Background="#2c3e50" WindowStartupLocation="CenterScreen">
-
+    
+    <Window.Resources>
+        <Style TargetType="Image">
+            <Setter Property="RenderOptions.BitmapScalingMode" Value="Fant" />
+        </Style>
+    </Window.Resources>
+    
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto" />
@@ -17,9 +23,9 @@
         </Grid.RowDefinitions>
 
         <StackPanel Grid.Row="0" Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center">
-            <Image Source="pack://siteoforigin:,,,/Resources/CubaseLogo.png" Height="50" />
+            <Image Source="pack://siteoforigin:,,,/Resources/GrooveBoxLogo.png" Height="50" VerticalAlignment="Center" />
             <Label Content="GrooveBox"
-                   FontFamily="/GrooveBox;component/Resources/Fonts/Roboto/#Roboto Condensed" FontSize="50" />
+                   FontFamily="/GrooveBox;component/Resources/Fonts/Roboto/#Roboto Condensed" FontSize="50" VerticalAlignment="Center" VerticalContentAlignment="Center" />
         </StackPanel>
         <Grid Grid.Row="1">
             <Grid.ColumnDefinitions>
@@ -46,7 +52,7 @@
                             <xctk:WatermarkTextBox Watermark="Search..." Name="GrooveLibrarySearch"
                                                    TextChanged="OnSearchTermsTextChanged" />
 
-                            <TreeView x:Name="GroovesTree" Background="Transparent" Height="270" />
+                            <TreeView x:Name="GroovesTree" Background="Transparent" />
 
                         </StackPanel>
 

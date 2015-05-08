@@ -36,7 +36,6 @@ namespace GrooveBox.Player
         }
 
         public bool Repeat { get; set; }
-
         public event EventHandler<CurrentBarEventArgs> NewBarStarted;
 
         public void Play()

@@ -10,8 +10,8 @@ namespace GrooveBox
 {
     internal sealed class AudioFileVisualiser : IAudioVisualiser
     {
-        const int Mid = 100;
-        const int YScale = 100;
+        private const int Mid = 100;
+        private const int YScale = 100;
 
         public Image AudioFileToImage(AudioFileReader reader)
         {

@@ -33,7 +33,7 @@ namespace GrooveBox
             }
             else
             {
-                GrooveTagItemBorder.Background = ApplicationColourPalette.Transparent; 
+                GrooveTagItemBorder.Background = ApplicationColourPalette.Transparent;
                 TagName.Foreground = ApplicationColourPalette.ItemColour;
             }
         }
