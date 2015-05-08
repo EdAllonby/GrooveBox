@@ -1,0 +1,85 @@
+﻿<dragDropper:DragDropAdorner x:Class="GrooveBox.GrooveDragDropAdorner"
+                             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                             xmlns:dragDropper="clr-namespace:GrooveBox.DragDropper"
+                             MinWidth="80" MinHeight="30">
+    <UserControl.RenderTransform>
+        <TransformGroup>
+            <ScaleTransform ScaleX="1" ScaleY="1" />
+            <SkewTransform AngleX="0" AngleY="0" />
+            <RotateTransform Angle="0" />
+            <TranslateTransform X="0" Y="0" />
+        </TransformGroup>
+    </UserControl.RenderTransform>
+    <UserControl.Resources>
+        <Storyboard x:Key="CanDrop" FillBehavior="Stop">
+            <DoubleAnimationUsingKeyFrames BeginTime="00:00:00"
+                                           Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)">
+                <SplineDoubleKeyFrame KeyTime="00:00:00" Value="1" />
+                <SplineDoubleKeyFrame KeySpline="0.709,0,0.689,1" KeyTime="00:00:00.1000000" Value="1.1" />
+                <SplineDoubleKeyFrame KeyTime="00:00:00.2000000" Value="0" />
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames BeginTime="00:00:00"
+                                           Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleY)">
+                <SplineDoubleKeyFrame KeyTime="00:00:00" Value="1" />
+                <SplineDoubleKeyFrame KeySpline="0.709,0,0.689,1" KeyTime="00:00:00.1000000" Value="1.1" />
+                <SplineDoubleKeyFrame KeyTime="00:00:00.2000000" Value="0" />
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimation Storyboard.TargetProperty="(UIElement.Opacity)" To="0" BeginTime="00:00:00"
+                             Duration="00:00:00.3" />
+        </Storyboard>
+        <Storyboard x:Key="CannotDrop" FillBehavior="Stop">
+            <DoubleAnimation BeginTime="00:00:00" Duration="00:00:00.25" AccelerationRatio=".1" DecelerationRatio=".9"
+                             Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" />
+            <DoubleAnimation BeginTime="00:00:00" Duration="00:00:00.25" AccelerationRatio=".1" DecelerationRatio=".9"
+                             Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" />
+            <DoubleAnimation Storyboard.TargetProperty="(UIElement.Opacity)" To="0" BeginTime="00:00:00.15"
+                             Duration="00:00:00.2" />
+        </Storyboard>
+        <Storyboard x:Key="LoadAnination">
+            <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="Grid"
+                                           Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)">
+                <SplineDoubleKeyFrame KeyTime="00:00:00" Value="0.3" />
+                <SplineDoubleKeyFrame KeySpline="0.709,0,0.689,1" KeyTime="00:00:00.1000000" Value="1.1" />
+                <SplineDoubleKeyFrame KeyTime="00:00:00.2000000" Value="1" />
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="Grid"
+                                           Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleY)">
+                <SplineDoubleKeyFrame KeyTime="00:00:00" Value="0.3" />
+                <SplineDoubleKeyFrame KeySpline="0.709,0,0.689,1" KeyTime="00:00:00.1000000" Value="1.1" />
+                <SplineDoubleKeyFrame KeyTime="00:00:00.2000000" Value="1" />
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="Grid"
+                                           Storyboard.TargetProperty="(UIElement.Opacity)">
+                <SplineDoubleKeyFrame KeyTime="00:00:00" Value="0" />
+                <SplineDoubleKeyFrame KeySpline="0.709,0,0.689,1" KeyTime="00:00:00.1000000" Value="1" />
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+
+    </UserControl.Resources>
+    <UserControl.Triggers>
+        <EventTrigger RoutedEvent="FrameworkElement.Loaded">
+            <BeginStoryboard Storyboard="{StaticResource LoadAnination}" />
+        </EventTrigger>
+    </UserControl.Triggers>
+    <Grid x:Name="Grid" RenderTransformOrigin="0.5,0.5">
+        
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <Grid.RenderTransform>
+            <TransformGroup>
+                <ScaleTransform ScaleX="1" ScaleY="1" />
+                <SkewTransform AngleX="0" AngleY="0" />
+                <RotateTransform Angle="0" />
+                <TranslateTransform X="0" Y="0" />
+            </TransformGroup>
+        </Grid.RenderTransform>
+        <Rectangle Grid.Row="0" Grid.RowSpan="2" x:Name="Back" StrokeThickness="2" RadiusX="8" RadiusY="8" Fill="#7F000000" Stroke="LightGray" />
+        <TextBlock Grid.Row="0" Name="GrooveName" Foreground="AliceBlue" FontSize="14" FontFamily="/GrooveBox;component/Resources/Fonts/Roboto/#Roboto Light" HorizontalAlignment="Center"/>
+        <Image Margin="5" Grid.Row="1" x:Name="GrooveWaveform" Height="50" HorizontalAlignment="Center" VerticalAlignment="Center" />
+        <Image Grid.Row="0" Grid.RowSpan="2" Opacity=".8" x:Name="Indicator" Width="20" Height="50" Stretch="Uniform" HorizontalAlignment="Right"
+               VerticalAlignment="Top" Margin="0,-12,-12,0" />
+    </Grid>
+</dragDropper:DragDropAdorner>

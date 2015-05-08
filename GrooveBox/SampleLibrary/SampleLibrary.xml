@@ -1,0 +1,176 @@
+<?xml version='1.0'?>
+
+<GrooveLibrary>
+  <Genre genre="RnB">
+    <Groove>
+      <Title>Punchy</Title>
+      <Audio>RNB1</Audio>
+
+      <Tags>
+        <Tag>Punchy</Tag>
+        <Tag>Rap</Tag>
+        <Tag>Cool</Tag>
+      </Tags>
+
+    </Groove>
+
+    <Groove>
+      <Title>Slow</Title>
+      <Audio>RNB2</Audio>
+
+      <Tags>
+        <Tag>Slow</Tag>
+        <Tag>Easy</Tag>
+        <Tag>Laid Back</Tag>
+      </Tags>
+
+    </Groove>
+
+    <Groove>
+      <Title>Kicky</Title>
+      <Audio>RNB3</Audio>
+
+      <Tags>
+        <Tag>Cool</Tag>
+        <Tag>Fast</Tag>
+        <Tag>Hard</Tag>
+        <Tag>Kicky</Tag>
+      </Tags>
+
+    </Groove>
+  </Genre>
+
+  <Genre genre="Funk">
+    <Groove>
+      <Title>Funkadelic</Title>
+      <Audio>Funk1</Audio>
+
+      <Tags>
+        <Tag>Punchy</Tag>
+        <Tag>Rap</Tag>
+        <Tag>Cool</Tag>
+      </Tags>
+
+    </Groove>
+
+    <Groove>
+      <Title>Noisy</Title>
+      <Audio>Funk2</Audio>
+
+      <Tags>
+        <Tag>Slow</Tag>
+        <Tag>Easy</Tag>
+        <Tag>Laid Back</Tag>
+      </Tags>
+
+    </Groove>
+
+    <Groove>
+      <Title>Speed</Title>
+      <Audio>Funk3</Audio>
+
+      <Tags>
+        <Tag>Punchy</Tag>
+        <Tag>Fast</Tag>
+        <Tag>Hard</Tag>
+        <Tag>Kicky</Tag>
+        <Tag>Super</Tag>
+      </Tags>
+
+    </Groove>
+
+    <Groove>
+      <Title>Soul</Title>
+      <Audio>Funk4</Audio>
+
+      <Tags>
+        <Tag>Cool</Tag>
+        <Tag>Fast</Tag>
+        <Tag>Hard</Tag>
+        <Tag>Kicky</Tag>
+      </Tags>
+
+    </Groove>
+
+    <Groove>
+      <Title>Disco</Title>
+      <Audio>Funk5</Audio>
+
+      <Tags>
+        <Tag>Cool</Tag>
+        <Tag>Fast</Tag>
+        <Tag>Hard</Tag>
+        <Tag>Kicky</Tag>
+      </Tags>
+
+    </Groove>
+
+    <Groove>
+      <Title>Classic</Title>
+      <Audio>Funk6</Audio>
+
+      <Tags>
+        <Tag>Cool</Tag>
+        <Tag>Fast</Tag>
+        <Tag>Hard</Tag>
+        <Tag>Kicky</Tag>
+      </Tags>
+
+    </Groove>
+  </Genre>
+
+  <Genre genre="Rock">
+    <Groove>
+      <Title>Pacey</Title>
+      <Audio>Rock1</Audio>
+
+      <Tags>
+        <Tag>Strong</Tag>
+        <Tag>Cymbals</Tag>
+        <Tag>Hard</Tag>
+        <Tag>Big</Tag>
+      </Tags>
+
+    </Groove>
+
+    <Groove>
+      <Title>Loud</Title>
+      <Audio>Rock4</Audio>
+
+      <Tags>
+        <Tag>Hit</Tag>
+        <Tag>Big</Tag>
+        <Tag>Hard</Tag>
+      </Tags>
+
+    </Groove>
+
+    <Groove>
+      <Title>Complex</Title>
+      <Audio>Rock4</Audio>
+
+      <Tags>
+        <Tag>Layered</Tag>
+        <Tag>Technical</Tag>
+        <Tag>Complex</Tag>
+        <Tag>Kicky</Tag>
+      </Tags>
+
+    </Groove>
+
+    <Groove>
+      <Title>HiHat</Title>
+      <Audio>Rock4</Audio>
+
+      <Tags>
+        <Tag>Cymbals</Tag>
+        <Tag>Complex</Tag>
+        <Tag>Quick</Tag>
+        <Tag>Kicky</Tag>
+      </Tags>
+
+    </Groove>
+
+  </Genre>
+
+</GrooveLibrary>

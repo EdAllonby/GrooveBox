@@ -1,0 +1,31 @@
+﻿<UserControl x:Class="GrooveBox.GrooveContainer"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             mc:Ignorable="d"
+             d:DesignHeight="200" d:DesignWidth="300" Margin="5">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <Grid.ToolTip>
+            <ToolTip>
+                <StackPanel>
+                    <TextBlock FontWeight="Bold" Text="Tags" />
+                    <TextBlock x:Name="GrooveTags" x:FieldModifier="private"/>
+                </StackPanel>
+            </ToolTip>
+        </Grid.ToolTip>
+
+        <Label x:Name="GrooveNameHolder" x:FieldModifier="private"
+               FontFamily="/GrooveBox;component/Resources/Fonts/Roboto/#Roboto Light" Visibility="Collapsed"
+               FontSize="14" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="AliceBlue" />
+        <Border Name="GrooveBorder" BorderBrush="#FF24313C" Grid.Row="1" BorderThickness="2">
+            <Image x:Name="GrooveImage" x:FieldModifier="private" Margin="5" />
+        </Border>
+    </Grid>
+</UserControl>

@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GrooveBox", "GrooveBox\GrooveBox.csproj", "{89CC8348-1A0E-4D93-AF00-5020522BCE99}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Utilities", "Utilities\Utilities.csproj", "{84C23D3D-9540-4A88-8EDB-C2CE36F54710}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GrooveBox.Tests", "GrooveBox.Tests\GrooveBox.Tests.csproj", "{1BC7379B-E93F-4F9A-8DEC-7C2B097F5BA7}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{89CC8348-1A0E-4D93-AF00-5020522BCE99}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{89CC8348-1A0E-4D93-AF00-5020522BCE99}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{89CC8348-1A0E-4D93-AF00-5020522BCE99}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{89CC8348-1A0E-4D93-AF00-5020522BCE99}.Release|Any CPU.Build.0 = Release|Any CPU
+		{84C23D3D-9540-4A88-8EDB-C2CE36F54710}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{84C23D3D-9540-4A88-8EDB-C2CE36F54710}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{84C23D3D-9540-4A88-8EDB-C2CE36F54710}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{84C23D3D-9540-4A88-8EDB-C2CE36F54710}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1BC7379B-E93F-4F9A-8DEC-7C2B097F5BA7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1BC7379B-E93F-4F9A-8DEC-7C2B097F5BA7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1BC7379B-E93F-4F9A-8DEC-7C2B097F5BA7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1BC7379B-E93F-4F9A-8DEC-7C2B097F5BA7}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
